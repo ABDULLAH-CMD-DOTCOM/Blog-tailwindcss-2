@@ -1,0 +1,88 @@
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+ 
+  --background: #fdf2f2; 
+  --foreground: #5f1f1f;
+  --primary: #e5003c; 
+  --secondary: #f1b0b0; 
+  --border-color: #f0b3b3; 
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+
+    --background: #2d2d2d;
+    --foreground: #f1f1f1; 
+    --primary: #e5003c; 
+    --secondary: #f1b0b0;
+    --border-color: #8f4a4a; 
+  }
+}
+
+body {
+  color: var(--foreground);
+  background: var(--background);
+  font-family: 'Arial', Helvetica, sans-serif;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+
+a {
+  color: var(--primary);
+  text-decoration: none;
+}
+
+a:hover {
+  color: var(--secondary);
+}
+
+button {
+  background-color: var(--primary);
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 4px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+button:hover {
+  background-color: var(--secondary);
+}
+
+
+input, textarea {
+  border: 1px solid var(--border-color);
+  background-color: white;
+  color: var(--foreground);
+  padding: 10px;
+  border-radius: 4px;
+  width: 100%;
+}
+
+input:focus, textarea:focus {
+  border-color: var(--primary);
+  outline: none;
+}
+
+
+@media (prefers-color-scheme: dark) {
+  a {
+    color: var(--primary);
+  }
+
+  button {
+    background-color: var(--primary);
+  }
+
+  input, textarea {
+    background-color: #3d3d3d;
+    color: var(--foreground);
+    border-color: #555;
+  }
+}
